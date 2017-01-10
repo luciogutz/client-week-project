@@ -1,0 +1,15 @@
+
+.footer_container{
+  background-color: black;
+  border: solid black 2px;
+  color: rgb(26, 145, 169);
+  opacity: 0.8;
+  text-align: center;
+  width: 100%;
+
+}
+.social_media_link{
+  color: rgb(213, 70, 133);
+  text-decoration: none;
+  margin-bottom: 20px;
+}
