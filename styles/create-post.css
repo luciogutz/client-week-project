@@ -1,0 +1,51 @@
+*{
+  box-sizing: border-box;
+}
+
+.ballImage{
+  height: 100px;
+  width: 100px;
+}
+
+.postAreaTitle{
+  font: 30px;
+  margin-left: 400px;
+
+}
+
+.homeButton{
+  background-color: grey;
+  display: inline-block;
+  margin-top: 50px;
+  margin-left: 30px;
+  height: 20px;
+  width: 100px;
+}
+
+.createArea{
+  background-color: rgb(26,145,169);
+  display: inline-block;
+  height: 300px;
+  margin-left: 300px;
+  width: 600px;
+}
+
+.titlePost{
+  height: 20px;
+  width: 600px;
+}
+
+.textPost{
+  width: 590px;
+  height: 270px;
+  margin-left: 5px;
+  margin-top: 5px;
+}
+
+.submitPost{
+  background-color: grey;
+  display: inline-block;
+  text-align: center;
+  height: 20px;
+  width: 600px;
+}
