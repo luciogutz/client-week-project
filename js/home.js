@@ -1,4 +1,6 @@
 import React from 'react'
+import Header from './header'
+import Footer from './footer'
 //import FacebookDetail from './FacebookDetail'
 
 export default React.createClass({
@@ -21,18 +23,19 @@ export default React.createClass({
   render() {
     return (
 
-
-
-        <ul className="listOfPost" ref="listOfPost"> {this.state.posts.map ((post,i)=>{
-                   return <li key={i}>
-                              <p className="nameAuthor">{post.postAuthor}</p>
-                              <p className='postDate'> {post.postDate} </p>
-                              <h1 className='postTitle'>{post.postTitle}</h1>
-                         </li>
-                 })
-                 }
-        </ul>
-
+        <section>
+          <Header />
+          <ul className="listOfPost" ref="listOfPost"> {this.state.posts.map ((post,i)=>{
+                     return <li key={i}>
+                                <p className="nameAuthor">{post.postAuthor}</p>
+                                <p className='postDate'> {post.postDate} </p>
+                                <h1 className='postTitle'>{post.postTitle}</h1>
+                           </li>
+                   })
+                   }
+          </ul>
+          <Footer />
+        </section>
     )
   }
 })
