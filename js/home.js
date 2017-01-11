@@ -1,6 +1,7 @@
 import React from 'react'
 import Header from './header'
 import Footer from './footer'
+import CreatePost from './createPost'
 
 export default React.createClass({
   getInitialState() {
@@ -33,6 +34,7 @@ export default React.createClass({
                    })
                    }
           </ul>
+          <CreatePost />
           <Footer />
         </section>
     )

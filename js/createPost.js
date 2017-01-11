@@ -29,15 +29,15 @@ export default React.createClass({
 
   render() {
     return (
-
+    <section className="createPost__section">
       <button className="homeButton">Home</button>
-      <!-- <img className="ballImage" src="styles/ball_rotate.gif"></img> -->
       <h1 className="postAreaTitle">Create Your Spurs Post Here</h1>
       <form className="createArea">
         <input className="titlePost" placeholder="Enter title of post"></input>
         <textarea className="textPost" placeholder="Enter text of post here"></textarea>
-        <submmit className="submitPost">SUBMIT</submit>
+        <submit className="submitPost">SUBMIT</submit>
       </form>
+    </section>
     )
   }
 })
