@@ -1,11 +1,11 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="styles/header.css">
-    <title></title>
-  </head>
-  <body>
+import React form "react"
+
+
+export default React.createClass({
+
+  render () {
+    
+    return (
       <header class="header">
         <img class="header__image" src="https://s-media-cache-ak0.pinimg.com/originals/f4/fd/be/f4fdbeed1a5a706fe225a5c4a02042ce.jpg" alt="">
         <h1 class="title"> All Things Spurs </h1>
@@ -15,8 +15,6 @@
           <img class="profile__pic" src="https://animprofileimages.s3.amazonaws.com/54538.jpg" alt="Profile Picture">
         </div>
       </header>
-
-
-  </body>
-  <script src="dist/bundle.js" charset="utf-8"></script>
-</html>
+    )
+  }
+})
