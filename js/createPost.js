@@ -6,8 +6,8 @@ export default React.createClass({
     return {
       createdPosts: [
         {
-        title: "",
-        postText: "",
+        title: "xxyy",
+        postText: "yyzz",
         }
       ]
     }
@@ -16,7 +16,7 @@ export default React.createClass({
     e.preventDefault();
     let titleText = this.refs.title.value
     let textPost = this.refs.textPost.value
-    
+
   },
   render() {
     return (
