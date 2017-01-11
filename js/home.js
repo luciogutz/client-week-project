@@ -1,7 +1,6 @@
 import React from 'react'
 import Header from './header'
 import Footer from './footer'
-//import FacebookDetail from './FacebookDetail'
 
 export default React.createClass({
   getInitialState() {
