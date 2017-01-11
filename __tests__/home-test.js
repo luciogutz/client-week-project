@@ -12,25 +12,25 @@ describe("Posting", () => {
   })
 
   it("Should display 'Author Name'", ()=>{
-    const currentAuthorNameElement = TestUtils.findRenderedDOMComponentWithClass(
+    const currentAuthorNameElements = TestUtils.scryRenderedDOMComponentsWithClass(
       postComponent,
       "nameAuthor"
     )
-    expect(currentAuthorNameElement.textContent).toBe("Author Name")
+    expect(currentAuthorNameElements[0].textContent).toBe("Author Name")
   })
   it("Should display post date'", ()=>{
-    const currentPostDateElement = TestUtils.findRenderedDOMComponentWithClass(
+    const currentPostDateElements = TestUtils.scryRenderedDOMComponentsWithClass(
       postComponent,
       "postDate"
     )
-    expect(currentPostDateElement.textContent).toBe(" 04/21/2015 ")
+    expect(currentPostDateElements[0].textContent).toBe("04/21/2015")
   })
   it("Should display post title'", ()=>{
-    const currentTitleDateElement = TestUtils.findRenderedDOMComponentWithClass(
+    const currentTitleDateElements = TestUtils.scryRenderedDOMComponentsWithClass(
       postComponent,
       "postTitle"
     )
-    expect(currentTitleDateElement.textContent).toBe("A New Year")
+    expect(currentTitleDateElements[0].textContent).toBe("A New Year")
   })
 
 })
