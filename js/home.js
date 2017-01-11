@@ -56,7 +56,7 @@ export default React.createClass({
     return (
         <section>
           <Header />
-          <h1 className="postHistory">List of Posts</h1>
+          <h1 className="postHistoryTitle">List of Posts</h1>
           <ul className="listOfPost" ref="listOfPost"> {this.state.posts.map ((post,i)=>{
                       var preview = "   " + post.postText.substring(0,40)+"..."
                      return <li key={i}>
