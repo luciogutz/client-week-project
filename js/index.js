@@ -1,9 +1,10 @@
 import React from 'react'
-import Home from './home'
 import { render } from 'react-dom'
+import Home from './home'
+
 
 
 render(
-  ( <Home />),
+  ( <Home /> ),
   document.getElementById('app')
 )
