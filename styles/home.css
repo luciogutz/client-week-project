@@ -1,0 +1,37 @@
+*{
+  box-sizing: border-box;
+}
+
+.listOfPost{
+  border: 3px solid black;
+  border-radius: 10px;
+  background-color: grey;
+  height: 100px;
+  list-style: none;
+  margin-left: 300px;
+  overflow: scroll;
+  width: 600px;
+}
+
+.postDate {
+  display: inline-block;
+  font-size: 20px;
+  margin: 0;
+}
+
+.postTitle {
+  display: inline-block;
+  font-size: 20px;
+  margin: 0;
+  padding-left: 30px;
+}
+
+.postHistory{
+  margin-left: 500px;
+}
+
+.previewPost{
+  font-size: 15px;
+  padding-left: 20px;
+  margin: 0
+}
