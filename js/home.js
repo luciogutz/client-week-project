@@ -183,7 +183,7 @@ export default React.createClass({
         <section ref="listOfPost" className="visible">
           <h1 className="postHistoryTitle">List of Posts</h1>
           <ul className="listOfPost" ref="listOfPost"> {this.state.posts.map ((post,i)=>{
-                     var preview = "   " + post.postText.substring(0,80)+"..."
+                     var preview = "   " + post.postText.substring(0,91)+"..."
                      return <li key={i}>
                                 <p className="postDate">{post.postDate}</p>
                                 <a href="#">
