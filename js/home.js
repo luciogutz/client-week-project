@@ -150,7 +150,10 @@ export default React.createClass({
       ]
     }
   },
-
+    onClickCreate() {
+      console.log("CLICK EVENT WORKING");
+    },
+    
     onClickSubmit(e) {
       e.preventDefault()
       let titleText = this.refs.title.value
@@ -168,8 +171,9 @@ export default React.createClass({
       this.refs.title.value = ""
       this.refs.textPost.value = ""
       this.refs.photoURL.value = ""
-      console.log("url = ", this.state.posts[0].photoUrl);
+      this.refs.createPost.className = "hidden"
     },
+
   render() {
     return (
       <div>
@@ -177,7 +181,7 @@ export default React.createClass({
           <Header />
           <h1 className="postHistoryTitle">List of Posts</h1>
           <ul className="listOfPost" ref="listOfPost"> {this.state.posts.map ((post,i)=>{
-                      var preview = "   " + post.postText.substring(0,40)+"..."
+                     var preview = "   " + post.postText.substring(0,80)+"..."
                      return <li key={i}>
                                 <p className="postDate">{post.postDate}</p>
                                 <a href="#">
@@ -188,8 +192,9 @@ export default React.createClass({
                    })
                    }
           </ul>
+          <button className="createPost" onClick={ this.onClickCreate }>Create New Post</button>
         </section>
-        <section className="createPost__section">
+        <section className="createPost__section" ref="createPost">
           <button className="homeButton">Home</button>
           <h1 className="postAreaTitle">Create Your Spurs Post Here</h1>
           <form className="createArea">

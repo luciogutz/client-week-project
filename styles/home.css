@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+.hidden{
+  visibility: hidden;
+}
+
 .listOfPost{
   border: 3px solid black;
   border-radius: 10px;
@@ -11,6 +15,14 @@
   margin-left: 300px;
   overflow: scroll;
   width: 600px;
+}
+
+.createPost{
+  background-color: grey;
+  display: inline-block;
+  margin-left: 500px;
+  height: 20px;
+  width: 200px;
 }
 
 .postDate {
