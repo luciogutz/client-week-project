@@ -153,6 +153,7 @@ export default React.createClass({
     onClickCreate() {
       console.log("CLICK EVENT WORKING");
     },
+    
     onClickSubmit(e) {
       e.preventDefault()
       let titleText = this.refs.title.value
@@ -168,6 +169,7 @@ export default React.createClass({
       this.setState(this.state.posts)
       this.refs.title.value = ""
       this.refs.textPost.value = ""
+      this.refs.createPost.className = "hidden"
     },
 
   render() {
@@ -190,7 +192,7 @@ export default React.createClass({
           </ul>
           <button className="createPost" onClick={ this.onClickCreate }>Create New Post</button>
         </section>
-        <section className="createPost__section">
+        <section className="createPost__section" ref="createPost">
           <button className="homeButton">Home</button>
           <h1 className="postAreaTitle">Create Your Spurs Post Here</h1>
           <form className="createArea">
