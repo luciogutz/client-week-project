@@ -158,6 +158,10 @@ export default React.createClass({
       this.refs.createPost.className = "visible"
       this.refs.listOfPost.className = "hidden"
     },
+    onClickPostTitle() {
+      let postTitle = this.refs.postTitle.value
+      console.log(postTitle);
+    },
     onClickSubmit(e) {
       e.preventDefault()
       let titleText = this.refs.title.value
@@ -188,7 +192,7 @@ export default React.createClass({
                      return <li key={i}>
                                 <p className="postDate">{post.postDate}</p>
                                 <a href="#" >
-                                  <h1 className="postTitle">{post.postTitle}</h1>
+                                  <h1 className="postTitle" ref="postTitle" onClick={ this.onClickPostTitle }>{post.postTitle}</h1>
                                 </a>
                                 <p className="previewPost">{preview}</p>
                            </li>
