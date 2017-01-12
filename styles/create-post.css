@@ -2,6 +2,13 @@
   box-sizing: border-box;
 }
 
+.addPhoto{
+  border-radius: 6px;
+  height: 40px;
+  margin-bottom: 20px;
+  width: 600px;
+}
+
 .ballImage{
   height: 100px;
   width: 100px;
