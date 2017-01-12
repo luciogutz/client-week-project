@@ -151,7 +151,22 @@ export default React.createClass({
     }
   },
 
-
+    onClickSubmit(e) {
+      e.preventDefault()
+      let titleText = this.refs.title.value
+      let textPost = this.refs.textPost.value
+      var newPost= {
+        postAuthor: "Name",
+        postAuthorIcon: "file.png",
+        postDate: "MM/DD/YY",
+        postTitle: titleText,
+        postText: textPost
+      }
+      this.state.posts.unshift(newPost)
+      this.setState(this.state.posts)
+      this.refs.title.value = ""
+      this.refs.textPost.value = ""
+    },
   render() {
     return (
       <div>
@@ -180,9 +195,8 @@ export default React.createClass({
             <submit className="submitPost" onClick={ this.onClickSubmit } >SUBMIT</submit>
           </form>
         </section>
-        <Footer />
+       <Footer />
       </div>
-
     )
   }
 })
