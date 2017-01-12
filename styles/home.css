@@ -7,27 +7,28 @@
 }
 
 .listOfPost{
-  border: 3px solid black;
+  border: 8px solid black;
   border-radius: 10px;
   background-color: grey;
   height: 300px;
-  list-style: none;
+  list-style:circle;
+  padding-left: 10px;
   margin-left: 300px;
   overflow: scroll;
-  width: 600px;
+  width: 50%;
 }
 
 .createPost{
   background-color: grey;
   display: inline-block;
-  margin-left: 500px;
+  margin-left: 450px;
   height: 20px;
   width: 200px;
 }
 
 .postDate {
   display: inline-block;
-  font-size: 20px;
+  font-size: 12px;
   margin: 0;
 }
 
@@ -35,7 +36,7 @@
   display: inline-block;
   font-size: 20px;
   margin: 0;
-  padding-left: 30px;
+  padding-left: 50px;
 }
 
 .postHistory{
