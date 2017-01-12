@@ -3,9 +3,11 @@
 }
 
 .hidden{
-  visibility: hidden;
+  display: none;
 }
-
+.visible {
+  display: block;
+}
 .listOfPost{
   border: 3px solid black;
   border-radius: 10px;

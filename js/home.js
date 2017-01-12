@@ -151,9 +151,11 @@ export default React.createClass({
     }
   },
     onClickCreate() {
+      this.refs.createPost.className = "visible"
+      this.refs.listOfPost.className = "hidden"
       console.log("CLICK EVENT WORKING");
     },
-    
+
     onClickSubmit(e) {
       e.preventDefault()
       let titleText = this.refs.title.value
@@ -177,8 +179,8 @@ export default React.createClass({
   render() {
     return (
       <div>
-        <section>
-          <Header />
+        <Header />
+        <section ref="listOfPost" className="visible">
           <h1 className="postHistoryTitle">List of Posts</h1>
           <ul className="listOfPost" ref="listOfPost"> {this.state.posts.map ((post,i)=>{
                      var preview = "   " + post.postText.substring(0,80)+"..."
@@ -194,7 +196,7 @@ export default React.createClass({
           </ul>
           <button className="createPost" onClick={ this.onClickCreate }>Create New Post</button>
         </section>
-        <section className="createPost__section" ref="createPost">
+        <section className="hidden" ref="createPost">
           <button className="homeButton">Home</button>
           <h1 className="postAreaTitle">Create Your Spurs Post Here</h1>
           <form className="createArea">
