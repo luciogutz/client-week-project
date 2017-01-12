@@ -153,9 +153,7 @@ export default React.createClass({
     onClickCreate() {
       this.refs.createPost.className = "visible"
       this.refs.listOfPost.className = "hidden"
-      console.log("CLICK EVENT WORKING");
     },
-
     onClickSubmit(e) {
       e.preventDefault()
       let titleText = this.refs.title.value
@@ -175,7 +173,6 @@ export default React.createClass({
       this.refs.photoURL.value = ""
       this.refs.createPost.className = "hidden"
     },
-
   render() {
     return (
       <div>
@@ -183,15 +180,15 @@ export default React.createClass({
         <section ref="listOfPost" className="visible">
           <h1 className="postHistoryTitle">List of Posts</h1>
           <ul className="listOfPost" ref="listOfPost"> {this.state.posts.map ((post,i)=>{
-                     var preview = "   " + post.postText.substring(0,91)+"..."
+                     var preview = "   " + post.postText.substring(0,85)+"..."
                      return <li key={i}>
                                 <p className="postDate">{post.postDate}</p>
-                                <a href="#">
+                                <a href="#" >
                                   <h1 className="postTitle">{post.postTitle}</h1>
                                 </a>
                                 <p className="previewPost">{preview}</p>
                            </li>
-                   })
+                      })
                    }
           </ul>
           <button className="createPost" onClick={ this.onClickCreate }>Create New Post</button>
