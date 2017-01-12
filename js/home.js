@@ -200,9 +200,9 @@ export default React.createClass({
           <button className="homeButton">Home</button>
           <h1 className="postAreaTitle">Create Your Spurs Post Here</h1>
           <form className="createArea">
-            <input ref="title" className="titlePost" placeholder="Enter title of post"></input>
-            <input ref="photoURL" className="addPhoto" type="url" placeholder="Enter photo URL"></input>
-            <textarea ref="textPost" className="textPost" placeholder="Enter text of post here"></textarea>
+            <input ref="title" className="titlePost" placeholder="Title"></input>
+            <input ref="photoURL" className="addPhoto" type="url" placeholder="Photo URL"></input>
+            <textarea ref="textPost" className="textPost" placeholder="Type something"></textarea>
             <submit className="submitPost" onClick={ this.onClickSubmit } >SUBMIT</submit>
           </form>
         </section>
