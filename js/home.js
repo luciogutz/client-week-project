@@ -150,6 +150,10 @@ export default React.createClass({
       ]
     }
   },
+    onClickHome() {
+      this.refs.listOfPost.className = "visible"
+      this.refs.createPost.className = "hidden"
+    },
     onClickCreate() {
       this.refs.createPost.className = "visible"
       this.refs.listOfPost.className = "hidden"
@@ -197,12 +201,18 @@ export default React.createClass({
           <button className="createPost" onClick={ this.onClickCreate }>Create New Post</button>
         </section>
         <section className="hidden" ref="createPost">
-          <button className="homeButton">Home</button>
-          <h1 className="postAreaTitle">Create Your Spurs Post Here</h1>
-          <form className="createArea">
-            <input ref="title" className="titlePost" placeholder="Title"></input>
-            <input ref="photoURL" className="addPhoto" type="url" placeholder="Photo URL"></input>
-            <textarea ref="textPost" className="textPost" placeholder="Type something"></textarea>
+          <div className="postAreaTitle">
+            <button onClick={this.onClickHome} className="homeButton">Home</button>
+            <h1 className="pageTitle">Create Your Spurs Post Here</h1>
+          </div>
+          <form>
+            <div className="titleImgInput">
+              <input ref="title" className="titlePost" placeholder="Title"></input>
+              <input ref="photoURL" className="addPhoto" type="url" placeholder="Photo URL"></input>
+            </div>
+            <div className="textPostSection">
+              <textarea ref="textPost" className="textPost" placeholder="Type something"></textarea>
+           </div>
             <submit className="submitPost" onClick={ this.onClickSubmit } >SUBMIT</submit>
           </form>
         </section>
