@@ -193,7 +193,8 @@ export default React.createClass({
     },
     onClickPostTitle(e) {
       var selectedPostTitle = e.target.textContent
-      var indexOfPostTitle = selectedPostTitle.substring(0,1) -1
+      var holdString = selectedPostTitle.split(".")
+      var indexOfPostTitle= holdString[0]-1
       this.refs.detailsPage.className = "visible"
       this.refs.listOfPost.className = "hidden"
       this.setState({indexOfPostTitle})
@@ -267,7 +268,6 @@ export default React.createClass({
           <div className="detail_post_wrapper">
          <div className="detail_post_info">
            <button className="detail_post_back_button"type="button" name="button">Back</button>
-           {console.log(this.state.indexOfPostTitle)}
            <h1 className="post_info"> {this.state.showTitle} </h1>
           </div>
           <div className="detail_post_img">
