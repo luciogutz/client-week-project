@@ -186,6 +186,7 @@ export default React.createClass({
     onClickHome() {
       this.refs.listOfPost.className = "visible"
       this.refs.createPost.className = "hidden"
+      this.refs.detailsPage.className = "hidden"
     },
     onClickCreate() {
       this.refs.createPost.className = "visible"
@@ -201,9 +202,13 @@ export default React.createClass({
       var showTitle = this.state.posts[indexOfPostTitle].postTitle
       var showText = this.state.posts[indexOfPostTitle].postText
       var showImg = this.state.posts[indexOfPostTitle].photoUrl
+      var showAuthor = this.state.posts[indexOfPostTitle].postAuthor
+      var showDate = this.state.posts [indexOfPostTitle].postDate
       this.setState({showTitle})
       this.setState({showText})
       this.setState({showImg})
+      this.setState({showAuthor})
+      this.setState({showDate})
     },
     onClickSubmit(e) {
       e.preventDefault()
@@ -267,13 +272,17 @@ export default React.createClass({
         <section className="hidden" ref="detailsPage">
           <div className="detail_post_wrapper">
          <div className="detail_post_info">
-           <button className="detail_post_back_button"type="button" name="button">Back</button>
+           <button onClick={this.onClickHome} className="homeButton">Home</button>
            <h1 className="post_info"> {this.state.showTitle} </h1>
           </div>
           <div className="detail_post_img">
-            <img className="" src={this.state.showImg} alt=""></img>
+            <img className="detail_post_img" src={this.state.showImg} alt=""></img>
           </div>
-          <p className="detail_post_content"> {this.state.showText} </p>
+          <div className="detail_post_content">
+            <p> {this.state.showDate} </p>
+            <p> By: {this.state.showAuthor}</p>
+            <p> {this.state.showText} </p>
+          </div>
           </div>
         </section>
        <Footer />
