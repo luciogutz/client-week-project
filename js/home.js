@@ -186,6 +186,7 @@ export default React.createClass({
     onClickHome() {
       this.refs.listOfPost.className = "visible"
       this.refs.createPost.className = "hidden"
+      this.refs.detailsPage.className = "hidden"
     },
     onClickCreate() {
       this.refs.createPost.className = "visible"
@@ -270,7 +271,7 @@ export default React.createClass({
         <section className="hidden" ref="detailsPage">
           <div className="detail_post_wrapper">
          <div className="detail_post_info">
-           <button className="detail_post_back_button"type="button" name="button">Back</button>
+           <button onClick={this.onClickHome} className="homeButton">Home</button>
            <h1 className="post_info"> {this.state.showTitle} </h1>
           </div>
           <div className="detail_post_img">
