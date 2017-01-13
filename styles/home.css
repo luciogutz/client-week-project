@@ -15,14 +15,14 @@
   border-radius: 10px;
   background-color: lightgrey;
   height: 300px;
-  list-style:circle;
+  list-style: none;
   padding-left: 10px;
   margin-left: 320px;
   overflow: scroll;
   width: 50%;
 }
 
-.createPost{
+.createPostButton{
   background-color: grey;
   display: inline-block;
   margin-left: 500px;
@@ -34,14 +34,16 @@
   display: inline-block;
   font-size: 12px;
   margin: 0;
+  white-space: pre;
 }
 
 .postTitle {
+  color: rgb(213, 70, 133);
   display: inline-block;
   font-size: 20px;
   margin: 0;
-  padding-left: 50px;
-  color: rgb(213, 70, 133);
+  padding-left: 0px;
+  white-space: pre;
 }
 
 .postHistory{
@@ -49,9 +51,11 @@
 }
 
 .previewPost{
-  font-size: 15px;
+  font-size: 12px;
   padding-left: 20px;
-  margin: 0
+  white-space: pre;
+  margin: 0;
+  margin-bottom: 10px;
 }
 
 .postHistoryTitle{
