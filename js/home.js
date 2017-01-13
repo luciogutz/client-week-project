@@ -274,7 +274,7 @@ export default React.createClass({
            <h1 className="post_info"> {this.state.showTitle} </h1>
           </div>
           <div className="detail_post_img">
-            <img className="" src={this.state.showImg} alt=""></img>
+            <img className="detail_post_img" src={this.state.showImg} alt=""></img>
           </div>
           <div className="detail_post_content">
             <p> {this.state.showDate} </p>
