@@ -7,28 +7,28 @@ export default React.createClass({
       posts: [
         {
           postAuthor: "Ranger",
-          photoUrl: "styles/authorIcon1.png",
+          photoUrl: "https://i.ytimg.com/vi/xVIwdQalOpw/maxresdefault.jpg",
           postDate: "APR 21 2015",
           postTitle: "Spurs vs Rockets",
           postText: "The Spurs and the Rockets compete for the top slot of their division as the new year begins. These two teams may be heading for a Texas Showdown come late spring",
         },
         {
           postAuthor: "Crypto",
-          photoUrl: "styles/authorIcon2.png",
+          photoUrl: "https://img.ifcdn.com/images/b81b8ac5b9c631f69a431ffadbe96337f9aec5d05175c5b277c5e7fde023a31b_1.jpg",
           postDate: "MAY 11 2015",
           postTitle: "Bigfoot practices with Spurs",
           postText: "In American folklore, Bigfoot (also known as Sasquatch) is a simian-like creature[2] that is said to inhabit forests, mainly in the Pacific Northwest. Bigfoot is usually described as a large, hairy, bipedal humanoid. The term sasquatch is an Anglicized derivative of the Halkomelem word sásq'ets",
         },
         {
           postAuthor: "Different Guy",
-          photoUrl: "styles/authorIcon3.png",
+          photoUrl: "https://pbs.twimg.com/media/BMHPBoHCEAAO7NW.jpg:large",
           postDate: "JUN 14 2015",
           postTitle: "Spurs went to the beach",
           postText: "An ocean is a body of saline water that composes much of a planet's hydrosphere.[2] On Earth, an ocean is one of the major conventional divisions of the World Ocean, which covers almost 71% of its surface.",
         },
         {
           postAuthor: "Different Guy",
-          photoUrl: "styles/authorIcon3.png",
+          photoUrl: "http://44d5i01rkpt329p8yqqf89h5.wpengine.netdna-cdn.com/wp-content/uploads/2015/05/san_antonio_spurs_logo_nba_dark_wallpaper_hd_26_for_dekstop_woz_.jpg",
           postDate: "JUN 06 2015",
           postTitle: "Spurs Lorem SA magna",
           postText: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecatm",
@@ -63,7 +63,7 @@ export default React.createClass({
         },
         {
           postAuthor: "Different Guy",
-          photoUrl: "styles/authorIcon3.png",
+          photoUrl: "http://44d5i01rkpt329p8yqqf89h5.wpengine.netdna-cdn.com/wp-content/uploads/2015/05/san_antonio_spurs_logo_nba_dark_wallpaper_hd_26_for_dekstop_woz_.jpg",
           postDate: "JUN 06 2015",
           postTitle: "Spurs Lorem SA magna",
           postText: "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecatm",
@@ -212,7 +212,7 @@ export default React.createClass({
       this.refs.textPost.value = ""
       this.refs.photoURL.value = ""
       this.refs.createPost.className = "hidden"
-      this.refs.listOfPost.className = "visible"
+      this.refs.detailsPage.className = "visible"
 
     },
   render() {
@@ -247,12 +247,12 @@ export default React.createClass({
               <input ref="photoURL" className="addPhoto" type="url" placeholder="Photo URL"></input>
             </div>
             <div className="textPostSection">
-              <textarea ref="textPost" className="textPost" placeholder="Type something"></textarea>
+              <textarea id="froala-editor" ref="textPost" className="textPost" placeholder="Type something"></textarea>
            </div>
             <submit className="submitPost" onClick={ this.onClickSubmit } >SUBMIT</submit>
           </form>
         </section>
-        <section className="hidden" ref="#">
+        <section ref="detailsPage" className="hidden" ref="#">
           <div className="detail_post_wrapper">
          <div className="detail_post_info">
            <button className="detail_post_back_button"type="button" name="button">Back</button>
