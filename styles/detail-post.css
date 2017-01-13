@@ -51,7 +51,7 @@
 .detail_post_wrapper {
   background-image: url("http://4.bp.blogspot.com/-H0IW7YOY23w/UQMjnwLdL6I/AAAAAAAAAIc/NXQ9ynFuhPA/s1600/NBA+court.jpg");
   border: none;
-  height: 1000px;
+  height: auto;
   margin: 0px;
   width: 100%;
 }
