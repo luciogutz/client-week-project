@@ -49,7 +49,7 @@ export default React.createClass({
         },
         {
           postAuthor: "Crypto",
-          photoUrl: "styles/authorIcon2.png",
+          photoUrl: "https://img.ifcdn.com/images/b81b8ac5b9c631f69a431ffadbe96337f9aec5d05175c5b277c5e7fde023a31b_1.jpg",
           postDate: "MAY 11 2015",
           postTitle: "Bigfoot practices with Spurs",
           postText: "In American folklore, Bigfoot (also known as Sasquatch) is a simian-like creature[2] that is said to inhabit forests, mainly in the Pacific Northwest. Bigfoot is usually described as a large, hairy, bipedal humanoid. The term sasquatch is an Anglicized derivative of the Halkomelem word sásq'ets",

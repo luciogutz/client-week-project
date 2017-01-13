@@ -23,11 +23,16 @@
 }
 
 .createPostButton{
-  background-color: grey;
+  transform: translateY(4px);
+  border-radius: 6px;
+  margin-left: 25%;
+  font-size: 30px;
+  line-height: 40px;
+  background-color: rgb(26, 145, 169);
   display: inline-block;
-  margin-left: 500px;
-  height: 20px;
-  width: 200px;
+  text-align: center;
+  height: 40px;
+  width: 638px;
 }
 
 .postDate {
