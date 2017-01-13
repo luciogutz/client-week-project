@@ -1,6 +1,9 @@
 import React from 'react'
 import Header from './header'
 import Footer from './footer'
+
+
+
 export default React.createClass({
   getInitialState() {
     return {
@@ -191,7 +194,15 @@ export default React.createClass({
     onClickPostTitle(e) {
       var selectedPostTitle = e.target.textContent
       var indexOfPostTitle = selectedPostTitle.substring(0,1) -1
-      alert(this.state.posts[indexOfPostTitle].postTitle+" *** "+this.state.posts[indexOfPostTitle].postDate+" *** "+ this.state.posts[indexOfPostTitle].postAuthor+" *** "+this.state.posts[indexOfPostTitle].photoUrl+" *** "+this.state.posts[indexOfPostTitle].postText)
+      this.refs.detailsPage.className = "visible"
+      this.refs.listOfPost.className = "hidden"
+      this.setState({indexOfPostTitle})
+      var showTitle = this.state.posts[indexOfPostTitle].postTitle
+      var showText = this.state.posts[indexOfPostTitle].postText
+      var showImg = this.state.posts[indexOfPostTitle].photoUrl
+      this.setState({showTitle})
+      this.setState({showText})
+      this.setState({showImg})
     },
     onClickSubmit(e) {
       e.preventDefault()
@@ -215,7 +226,7 @@ export default React.createClass({
       this.refs.detailsPage.className = "visible"
 
     },
-  render() {
+  render(indexOfPostTitle) {
     return (
       <div>
         <Header />
@@ -252,16 +263,17 @@ export default React.createClass({
             <submit className="submitPost" onClick={ this.onClickSubmit } >SUBMIT</submit>
           </form>
         </section>
-        <section ref="detailsPage" className="hidden" ref="#">
+        <section className="hidden" ref="detailsPage">
           <div className="detail_post_wrapper">
          <div className="detail_post_info">
            <button className="detail_post_back_button"type="button" name="button">Back</button>
-           <h1 className="post_info">Spurs loose big time: fans riot in San Antonio</h1>
+           {console.log(this.state.indexOfPostTitle)}
+           <h1 className="post_info"> {this.state.showTitle} </h1>
           </div>
           <div className="detail_post_img">
-            <img className="" src="https://files.slack.com/files-tmb/T37E93AFL-F38MC0B7A-be1e4674fb/class_photos_ironyard_small-3_720.jpg" alt=""></img>
+            <img className="" src={this.state.showImg} alt=""></img>
           </div>
-          <p className="detail_post_content">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          <p className="detail_post_content"> {this.state.showText} </p>
           </div>
         </section>
        <Footer />
