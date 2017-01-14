@@ -32,11 +32,10 @@
 }
 .detail_post_img {
   border-radius: 8px;
-  display: inline-block;
-  margin-left: 25%;
-  margin-top: 10px;
+  display: block;
+  margin: 2% auto 2% auto;
   vertical-align: middle;
-  width: 50%;
+  width: 70%;
 }
 .detail_post_info {
   background-color: black;
