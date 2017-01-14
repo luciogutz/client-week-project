@@ -2,6 +2,7 @@
 *{
   box-sizing: border-box;
 }
+
 .detail_post_back_button {
   background-color: rgb(216, 136, 38);
   color: white;
@@ -58,7 +59,11 @@
 .post_info {
   display: inline-block;
   width: 50%;
-  text-align: center;
+  margin-right: 14%;
   font-size: 40px;
   margin-top: 20px;
 }
+
+/*.paragraphOverflow {
+  overflow: scroll;
+}*/
