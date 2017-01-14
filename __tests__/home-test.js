@@ -11,13 +11,6 @@ describe("Posting", () => {
     postComponent = TestUtils.renderIntoDocument(<Homefile />)
   })
 
-  it("Should display 'Ranger'", ()=>{
-    const currentAuthorNameElements = TestUtils.scryRenderedDOMComponentsWithClass(
-      postComponent,
-      "nameAuthor"
-    )
-    expect(currentAuthorNameElements[0].textContent).toBe("Ranger")
-  })
   it("Should display post date'", ()=>{
     const currentPostDateElements = TestUtils.scryRenderedDOMComponentsWithClass(
       postComponent,
@@ -32,18 +25,12 @@ describe("Posting", () => {
     )
     expect(currentTitleDateElements[0].textContent).toBe("1.   Spurs vs Rockets")
   })
-  it("Should display post title just entered'", ()=>{
-    const currentDetailTitleElements = TestUtils.scryRenderedDOMComponentsWithClass(
-      postComponent,
-      "post_info"
-    )
-    expect(currentDetailTitleElements[0].textContent).toBe("Test Title")
+  it("Create page should have a submit button", ()=>{
+    const createSubmitButtonElementsubmitPost = TestUtils.scryRenderedDOMComponentsWithClass(postComponent, "submitPost")
+    expect(createSubmitButtonElementsubmitPost).toBeDefined()
   })
-  it("Should display today's date because posted today'", ()=>{
-    const currentDetailDateElements = TestUtils.scryRenderedDOMComponentsWithClass(
-      postComponent,
-      "******date class name******"
-    )
-    expect(currentDetailDateElements[0].textContent).toBe(Date().substring(4,16))
+  it("Detail page should have a home button", ()=>{
+    const createHomeButtonElement = TestUtils.scryRenderedDOMComponentsWithClass(postComponent, "homeButton")
+    expect(createHomeButtonElement).toBeDefined()
   })
 })
