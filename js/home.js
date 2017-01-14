@@ -195,15 +195,15 @@ export default React.createClass({
     onClickPostTitle(e) {
       var selectedPostTitle = e.target.textContent
       var holdString = selectedPostTitle.split(".")
-      var indexOfPostTitle= holdString[0]-1
+      var indexOfPost= holdString[0]-1
       this.refs.detailsPage.className = "visible"
       this.refs.listOfPost.className = "hidden"
-      this.setState({indexOfPostTitle})
-      var showTitle = this.state.posts[indexOfPostTitle].postTitle
-      var showText = this.state.posts[indexOfPostTitle].postText
-      var showImg = this.state.posts[indexOfPostTitle].photoUrl
-      var showAuthor = this.state.posts[indexOfPostTitle].postAuthor
-      var showDate = this.state.posts [indexOfPostTitle].postDate
+      this.setState({indexOfPost})
+      var showTitle = this.state.posts[indexOfPost].postTitle
+      var showText = this.state.posts[indexOfPost].postText
+      var showImg = this.state.posts[indexOfPost].photoUrl
+      var showAuthor = this.state.posts[indexOfPost].postAuthor
+      var showDate = this.state.posts [indexOfPost].postDate
       this.setState({showTitle})
       this.setState({showText})
       this.setState({showImg})
@@ -228,11 +228,22 @@ export default React.createClass({
       this.refs.title.value = ""
       this.refs.textPost.value = ""
       this.refs.photoURL.value = ""
+      var indexOfPost = 0
+      var showTitle = this.state.posts[indexOfPost].postTitle
+      var showText = this.state.posts[indexOfPost].postText
+      var showImg = this.state.posts[indexOfPost].photoUrl
+      var showAuthor = this.state.posts[indexOfPost].postAuthor
+      var showDate = this.state.posts [indexOfPost].postDate
+      this.setState({showTitle})
+      this.setState({showText})
+      this.setState({showImg})
+      this.setState({showAuthor})
+      this.setState({showDate})
       this.refs.createPost.className = "hidden"
       this.refs.detailsPage.className = "visible"
 
     },
-  render(indexOfPostTitle) {
+  render(indexOfPost) {
     return (
       <div>
         <Header />
