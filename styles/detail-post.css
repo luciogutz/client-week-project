@@ -20,7 +20,8 @@
 
 }
 .detail_post_content {
-  background-color: grey;
+  background-color: lightgrey;
+  border: solid 4px;
   border-radius: 8px;
   font-size: 18px;
   height: auto;
