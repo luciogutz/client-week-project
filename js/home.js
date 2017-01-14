@@ -266,7 +266,7 @@ export default React.createClass({
             <div className="textPostSection">
               <textarea ref="textPost" className="textPost" placeholder="Type something"></textarea>
            </div>
-            <submit className="submitPost" onClick={ this.onClickSubmit } >SUBMIT</submit>
+            <submit className="submitPost" ref="submitButton"onClick={ this.onClickSubmit } >SUBMIT</submit>
           </form>
         </section>
         <section className="hidden" ref="detailsPage">
