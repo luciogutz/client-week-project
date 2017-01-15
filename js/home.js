@@ -270,7 +270,7 @@ export default React.createClass({
       let currentDate = Date().substring(4,16)
       // creating a new object value using all key values we assigned in this event
       var newPost= {
-        postAuthor: "Anomynous",
+        postAuthor: "(anonymous)",
         photoUrl: imgLink,
         postDate: currentDate,
         postTitle: titleText,
