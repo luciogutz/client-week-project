@@ -213,6 +213,18 @@ export default React.createClass({
     onClickSubmit(e) {
       e.preventDefault()
       let titleText = this.refs.title.value
+      let titleArray = titleText.split(" ")
+      let arrayLength = titleArray.length
+      let newTitle = ""
+      for (var i = 0; i<arrayLength; i++){
+        let char = titleArray[i][0].toUpperCase()
+        let newTitleWord = char
+        for (var j = 1; j<titleArray[i].length; j++){
+          newTitleWord += titleArray[i][j].split("")
+        }
+        newTitle += newTitleWord + " "
+      }
+      titleText = newTitle
       let textPost = this.refs.textPost.value
       let imgLink = this.refs.photoURL.value
       let currentDate = Date().substring(4,16)
