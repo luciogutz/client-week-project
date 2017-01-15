@@ -1,4 +1,6 @@
 import React from 'react'
+import Header from './header'
+import Footer from './footer'
 
 
 export default React.createClass({
@@ -255,6 +257,7 @@ export default React.createClass({
       this.refs.detailsPage.className = "visible"
 
     },
+
   render(indexOfPost) {
     return (
       <div>
