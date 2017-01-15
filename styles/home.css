@@ -2,27 +2,26 @@
   box-sizing: border-box;
 }
 
-.hidden{
-  display: none;
+body {
+  background-color: grey;
+  background-image: url("http://4.bp.blogspot.com/-H0IW7YOY23w/UQMjnwLdL6I/AAAAAAAAAIc/NXQ9ynFuhPA/s1600/NBA+court.jpg");
+  z-index: -1;
 }
 
-.visible {
-  display: block;
+.addPhoto {
+  border-radius: 6px;
+  font-size: 16px;
+  height: 40px;
+  margin-bottom: 20px;
+  width: 700px;
 }
 
-.listOfPost{
-  border: 8px solid black;
-  border-radius: 10px;
-  background-color: lightgrey;
-  height: 300px;
-  list-style: none;
-  padding-left: 10px;
-  margin-left: 320px;
-  overflow: scroll;
-  width: 50%;
+.ballImage {
+  height: 100px;
+  width: 100px;
 }
 
-.createPostButton{
+.createPostButton {
   transform: translateY(4px);
   border-radius: 6px;
   margin-left: 25%;
@@ -35,139 +34,10 @@
   width: 638px;
 }
 
-.postDate {
-  display: inline-block;
-  font-size: 12px;
-  margin: 0;
-  white-space: pre;
-}
-
-.postTitle {
-  color: rgb(213, 70, 133);
-  display: inline-block;
-  font-size: 20px;
-  margin: 0;
-  padding-left: 0px;
-  white-space: pre;
-}
-
-.postHistory{
-  margin-left: 500px;
-}
-
-.previewPost{
-  font-size: 12px;
-  padding-left: 20px;
-  white-space: pre;
-  margin: 0;
-  margin-bottom: 10px;
-}
-
-.postHistoryTitle{
-  text-align: center;
-  padding: 4px;
-  opacity: 0.8;
-  background-color: black;
-  font-weight: bolder;
-  font-size: 50px;
-  color: rgb(26, 145, 169)
-}
-
-.addPhoto{
-  border-radius: 6px;
-  font-size: 16px;
-  height: 40px;
-  margin-bottom: 20px;
-  width: 700px;
-}
-
-.ballImage{
-  height: 100px;
-  width: 100px;
-}
-
-.pageTitle {
-  text-align: center;
-  font-size: 100%;
-  margin-right: 15%;
-  margin-top: 0;
-  margin-bottom: 0;
-  line-height: 100px;
-}
-
-.postAreaTitle{
-  line-height: 100px;
-  margin-top: 3%;
-  margin-bottom: 5%;
-  width: 100%;
-  opacity: 0.8;
-  background-color: black;
-  height: 100px;
-  font-weight: bolder;
-  font-size: 50px;
-  color: rgb(26, 145, 169)
-}
-
-.homeButton{
-  index: -1;
-  font-size: 22px;
-  border-radius: 100px;
-  background-color: orange;
-  display: inline-block;
-  float: left;
-  margin-left: 8%;
-  margin-top: 14px;
-  height: 75px;
-  width: 75px;
-}
-
 .createPost__section {
   width: 100%;
   height: 600px;
   margin-bottom: 200px;
-}
-
-.titleImgInput {
-  /*background-color: rgb(26,145,169);*/
-  display: inline-block;
-  height: 100px;
-  margin-left: 22%;
-  width: 50%;
-}
-
-.titlePost{
-  border-radius: 6px;
-  font-size: 16px;
-  height: 40px;
-  margin-bottom: 20px;
-  width: 700px;
-}
-
-.textPostSection {
-  margin-left: 22%;
-  margin-top:1%;
-}
-
-.textPost{
-  border-radius: 6px;
-  font-size: 16px;
-  height: 270px;
-  margin-top: 5px;
-  width: 700px;
-}
-
-.submitPost{
-  transform: translateY(4px);
-  border-radius: 6px;
-  margin-top: 20px;
-  margin-left: 22%;
-  font-size: 30px;
-  line-height: 40px;
-  background-color: rgb(26, 145, 169);
-  display: inline-block;
-  text-align: center;
-  height: 40px;
-  width: 700px;
 }
 
 .detail_post_back_button {
@@ -223,18 +93,16 @@
   margin: 0px;
   width: 100%;
 }
-.post_info {
-  display: inline-block;
-  width: 50%;
-  margin-right: 15%;
-  font-size: 40px;
-  margin-top: 20px;
-}
 
-body {
-  background-color: grey;
-  background-image: url("http://4.bp.blogspot.com/-H0IW7YOY23w/UQMjnwLdL6I/AAAAAAAAAIc/NXQ9ynFuhPA/s1600/NBA+court.jpg");
-  z-index: -1;
+.footer_container {
+  background-color: black;
+  border-radius: 8px;
+  color: rgb(26, 145, 169);
+  height: 100px;
+  opacity: 0.8;
+  text-align: center;
+  width: 100%;
+  margin-top: 50px;
 }
 
 .header {
@@ -274,11 +142,142 @@ body {
   margin-right: 4%;
 }
 
+.hidden {
+  display: none;
+}
+
+.homeButton {
+  index: -1;
+  font-size: 22px;
+  border-radius: 100px;
+  background-color: orange;
+  display: inline-block;
+  float: left;
+  margin-left: 8%;
+  margin-top: 14px;
+  height: 75px;
+  width: 75px;
+}
+
+.listOfPost {
+  border: 8px solid black;
+  border-radius: 10px;
+  background-color: lightgrey;
+  height: 300px;
+  list-style: none;
+  padding-left: 10px;
+  margin-left: 320px;
+  overflow: scroll;
+  width: 50%;
+}
+
+.pageTitle {
+  text-align: center;
+  font-size: 100%;
+  margin-right: 15%;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 100px;
+}
+
+.postAreaTitle {
+  line-height: 100px;
+  margin-top: 3%;
+  margin-bottom: 5%;
+  width: 100%;
+  opacity: 0.8;
+  background-color: black;
+  height: 100px;
+  font-weight: bolder;
+  font-size: 50px;
+  color: rgb(26, 145, 169)
+}
+
+.postDate {
+  display: inline-block;
+  font-size: 12px;
+  margin: 0;
+  white-space: pre;
+}
+
+.postHistory {
+  margin-left: 500px;
+}
+
+.postHistoryTitle {
+  text-align: center;
+  padding: 4px;
+  opacity: 0.8;
+  background-color: black;
+  font-weight: bolder;
+  font-size: 50px;
+  color: rgb(26, 145, 169)
+}
+
+.post_info {
+  display: inline-block;
+  width: 50%;
+  margin-right: 15%;
+  font-size: 40px;
+  margin-top: 20px;
+}
+
+.postTitle {
+  color: rgb(213, 70, 133);
+  display: inline-block;
+  font-size: 20px;
+  margin: 0;
+  padding-left: 0px;
+  white-space: pre;
+}
+
+.previewPost {
+  font-size: 12px;
+  padding-left: 20px;
+  white-space: pre;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
 .profile__pic {
  height: 75px;
  margin-left: 10px;
  margin-top: 14px;
  border-radius: 100px;
+}
+
+.social_media_link {
+  color: rgb(213, 70, 133);
+  display: inline-block;
+  text-decoration: none;
+  margin: 20px 10px 0px 10px;
+}
+
+.submitPost {
+  transform: translateY(4px);
+  border-radius: 6px;
+  margin-top: 20px;
+  margin-left: 22%;
+  font-size: 30px;
+  line-height: 40px;
+  background-color: rgb(26, 145, 169);
+  display: inline-block;
+  text-align: center;
+  height: 40px;
+  width: 700px;
+}
+
+.textPost {
+  border-radius: 6px;
+  font-size: 16px;
+  height: 270px;
+  margin-top: 5px;
+  width: 700px;
+}
+
+.textPostSection {
+  margin-left: 22%;
+  margin-top:1%;
 }
 
 .title {
@@ -294,20 +293,22 @@ body {
   vertical-align: top;
 }
 
-.footer_container{
-  background-color: black;
-  border-radius: 8px;
-  color: rgb(26, 145, 169);
-  height: 100px;
-  opacity: 0.8;
-  text-align: center;
-  width: 100%;
-  margin-top: 50px;
-
-}
-.social_media_link{
-  color: rgb(213, 70, 133);
+.titleImgInput {
+  /*background-color: rgb(26,145,169);*/
   display: inline-block;
-  text-decoration: none;
-  margin: 20px 10px 0px 10px;
+  height: 100px;
+  margin-left: 22%;
+  width: 50%;
+}
+
+.titlePost {
+  border-radius: 6px;
+  font-size: 16px;
+  height: 40px;
+  margin-bottom: 20px;
+  width: 700px;
+}
+
+.visible {
+  display: block;
 }
