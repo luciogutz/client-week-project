@@ -1,12 +1,9 @@
 import React from "react"
-
-
 export default React.createClass({
  onClickAbout(){
    alert("This site developed by JS Junkies Copyright 2017, All Rights Reserved")
  },
   render () {
-
     return (
       <section>
         <footer className="footer_container">
