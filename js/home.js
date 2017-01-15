@@ -1,7 +1,7 @@
 import React from 'react'
 import Header from './header'
 import Footer from './footer'
-
+var validUrl = require('valid-url');
 
 export default React.createClass({
   getInitialState() {
@@ -229,6 +229,11 @@ export default React.createClass({
       titleText = newTitle
       let textPost = this.refs.textPost.value
       let imgLink = this.refs.photoURL.value
+        if (validUrl.isUri(imgLink)){
+
+        } else {
+              imgLink = "https://files.slack.com/files-tmb/T37E93AFL-F3RSLHSLD-5e7095652c/pasted_image_at_2017_01_15_02_04_pm_720.png"
+          }
       let currentDate = Date().substring(4,16)
       var newPost= {
         postAuthor: "Name",
